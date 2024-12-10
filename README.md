@@ -1,24 +1,19 @@
-# encrypt_payload
+# **encrypt_payload**
+This project allows users to perform file encryption operations and generate payloads with MSFvenom. It includes two main files:
 
-Bu proje, kullanıcıların dosya şifreleme işlemleri ve MSFvenom ile payload üretme işlemleri yapmalarını sağlar. İki ana dosya içerir:
+- *function.py*: Contains functions for file encryption and MSFvenom payload generation.
+- *start.py*: The executable file of the project.
 
-- **function.py**: Dosya şifreleme ve MSFvenom payload oluşturma işlemleri için fonksiyonlar içerir.
-- **start.py**: Projenin çalıştırılabilir dosyasıdır.
+## *"Libraries Used**
+The following Python libraries are used in this project:
 
-## Kullanılan Kütüphaneler
-
-Bu projede aşağıdaki Python kütüphaneleri kullanılmaktadır:
-
-- `cryptography`: Dosya şifreleme işlemleri için AES şifreleme algoritması kullanılır.
-- `subprocess`: MSFvenom komutlarını çalıştırmak için kullanılır.
-- `os`: Sistem işlemleri için kullanılır.
-
+- `cryptography`: Used for AES encryption algorithm for file encryption.
+- `subprocess`: Used to run MSFvenom commands.
+- `os`: Used for system operations.
 
 ---
-
-## Kurulum
-
-Projeyi kullanmadan önce gerekli kütüphaneleri yüklemek için şu komutu çalıştırabilirsiniz:
+## **Installation**
+Before using the project, you can run the following command to install the required libraries:
 
 ```bash
 pip install -r requirements.txt
@@ -28,35 +23,27 @@ pip install -r requirements.txt
 python3 start.py
 
 ```
-# Dosya Şifreleme
+## **File Encryption**
+The `encrypt_file` function in the `function.py` file encrypts the given file using the AES algorithm. The encrypted file is saved with a .enc extension.
 
-function.py dosyasındaki encrypt_file fonksiyonu, verilen dosyayı AES algoritması ile şifreler. Şifreli dosya .enc uzantısı ile kaydedilir.
-
-Fonksiyonlar
-- genel_cont(file_name): MSFvenom ile Windows Meterpreter reverse TCP payload oluşturur.
-- generate_key(password): Parola ile şifreleme anahtarı üretir.
-- encrypt_file(filename, password): Dosyayı şifreler.
-
---- 
-
-## Etik Uyarı
-
-Bu araç yalnızca **eğitim amaçlı** kullanılmalıdır.
-Başkalarına ait sistemlere yönelik herhangi bir izinsiz erişim girişimi yasadışıdır ve etik dışıdır.
-Lütfen bu aracı yalnızca **test ortamlarında** kullanın. Aksi takdirde yasal sorumluluk doğurabilir.
-
-
-
-## Lisans
-
-Bu proje, [MIT Lisansı](LICENSE) altında lisanslanmıştır.
+Functions
+- genel_cont(file_name): Creates a Windows Meterpreter reverse TCP payload with MSFvenom.
+- generate_key(password): Generates an encryption key using a password.
+- encrypt_file(filename, password): Encrypts the file.
 
 ---
+## **Ethical Warning**
+This tool should only be used for *educational purposes*.
+Any unauthorized access attempt to systems belonging to others is illegal and unethical.
+Please use this tool only in *test environments*. Otherwise, it may result in legal liability.
 
-### `requirements.txt`
+## **License**
+This project is licensed under the [MIT License](LICENSE).
 
+---
+*`requirements.txt`*
 ```txt
 cryptography
 os
-subprocces
+subprocess
 ```
