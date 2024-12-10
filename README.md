@@ -4,7 +4,7 @@ This project allows users to perform file encryption operations and generate pay
 - *function.py*: Contains functions for file encryption and MSFvenom payload generation.
 - *start.py*: The executable file of the project.
 
-## *"Libraries Used**
+## **Libraries Used**
 The following Python libraries are used in this project:
 
 - `cryptography`: Used for AES encryption algorithm for file encryption.
